@@ -212,10 +212,6 @@ dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
 dt_string = datetime.strptime(dt_string, "%d/%m/%Y %H:%M:%S")
 
 ###Store to wt_notification table
-server = 'jiepbdsq401' 
-database = 'DB_ENG_DEVL' 
-username = 'user_eng' 
-password = 'persada123'
 
 constr1 = f'DRIVER={{ODBC Driver 11 for SQL Server}}; SERVER={server}; DATABASE={database}; UID={username}; PWD={password}'
 
@@ -440,7 +436,7 @@ for idx, reg in enumerate(dist_mtrx.keys()):
     
 process_time = time.time() - start
 print('======================== FINISHED IN : ',round(process_time,2), ' seconds')
-df_result.to_csv('nono_ganteng1.csv', index= False)
+df_result.to_csv('result.csv', index= False)
 
 
 #================================
